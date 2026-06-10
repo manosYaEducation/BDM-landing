@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bdm-black: #000000;
+  --color-bdm-gold: #D4AF37;
+  --color-bdm-dark: #111111;
+  --color-bdm-white: #FFFFFF;
+
+  --font-sans: var(--font-montserrat);
+  --font-bebas: var(--font-bebas-neue);
+}
+
+body {
+  background-color: var(--color-bdm-black);
+  color: var(--color-bdm-white);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Utilities for smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gallery carousel marquee */
+@keyframes marquee-gallery {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-gallery {
+  animation: marquee-gallery 25s linear infinite;
+}
+
+.animate-marquee-gallery:hover {
+  animation-play-state: paused;
+}
