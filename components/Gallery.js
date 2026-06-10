@@ -32,9 +32,9 @@ export default function Gallery() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bebas text-white mb-4 uppercase"
           >
-            Galería de <span className="text-bdm-gold">Eventos</span>
+            Galería de <span className="text-bdm-red">Eventos</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-bdm-gold mx-auto"></div>
+          <div className="w-20 h-1 bg-bdm-red mx-auto"></div>
         </div>
 
         {/* Carousel */}
@@ -54,7 +54,7 @@ export default function Gallery() {
                   className="relative w-56 h-40 shrink-0 overflow-hidden cursor-pointer group bg-bdm-dark"
                   onClick={() => openLightbox(idx % images.length)}
                 >
-                  <div className="absolute inset-0 bg-bdm-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                  <div className="absolute inset-0 bg-bdm-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <img
                     src={src}
                     alt={`BDM Evento ${(idx % images.length) + 1}`}
@@ -79,19 +79,19 @@ export default function Gallery() {
           >
             <button
               onClick={closeLightbox}
-              className="absolute top-6 right-6 text-white hover:text-bdm-gold transition-colors z-10"
+              className="absolute top-6 right-6 text-white hover:text-bdm-red transition-colors z-10"
             >
               <X size={28} />
             </button>
             <button
               onClick={(e) => { e.stopPropagation(); prev(); }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-bdm-gold transition-colors z-10 bg-bdm-black/50 p-2"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-bdm-red transition-colors z-10 bg-bdm-black/50 p-2"
             >
               <ChevronLeft size={32} />
             </button>
             <button
               onClick={(e) => { e.stopPropagation(); next(); }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-bdm-gold transition-colors z-10 bg-bdm-black/50 p-2"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-bdm-red transition-colors z-10 bg-bdm-black/50 p-2"
             >
               <ChevronRight size={32} />
             </button>

@@ -57,7 +57,7 @@ export default function AvailableEvents() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bebas text-white mb-4 uppercase"
           >
-            Eventos <span className="text-bdm-gold">Disponibles</span>
+            Eventos <span className="text-bdm-red">Disponibles</span>
           </motion.h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Adquiere los derechos de los eventos oficiales de la marca BDM para tu ciudad o institución.
@@ -72,10 +72,10 @@ export default function AvailableEvents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`p-5 flex flex-col h-full ${evt.featured ? 'bg-bdm-gold text-bdm-black border-2 border-bdm-gold' : 'bg-bdm-black border border-bdm-dark text-white'} transition-transform duration-300 hover:-translate-y-2`}
+              className={`p-5 flex flex-col h-full ${evt.featured ? 'bg-bdm-red text-bdm-black border-2 border-bdm-red' : 'bg-bdm-black border border-bdm-dark text-white'} transition-transform duration-300 hover:-translate-y-2`}
             >
               <h3 className="text-xl font-bebas mb-1 uppercase leading-tight">{evt.title}</h3>
-              <p className={`font-bold mb-4 text-lg ${evt.featured ? 'text-bdm-black' : 'text-bdm-gold'}`}>{evt.ticketPrice}</p>
+              <p className={`font-bold mb-4 text-lg ${evt.featured ? 'text-bdm-black' : 'text-bdm-red'}`}>{evt.ticketPrice}</p>
 
               <div className="space-y-2 mb-5 flex-grow">
                 <div className="flex items-center text-xs">
@@ -92,7 +92,7 @@ export default function AvailableEvents() {
                 </div>
               </div>
 
-              <button className={`w-full py-2 uppercase tracking-wider text-xs font-bold flex items-center justify-center transition-colors duration-300 ${evt.featured ? 'bg-bdm-black text-bdm-gold hover:bg-white hover:text-bdm-black' : 'border border-bdm-gold text-bdm-gold hover:bg-bdm-gold hover:text-bdm-black'}`}>
+              <button className={`w-full py-2 uppercase tracking-wider text-xs font-bold flex items-center justify-center transition-colors duration-300 ${evt.featured ? 'bg-bdm-black text-bdm-red hover:bg-white hover:text-bdm-black' : 'border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black'}`}>
                 Comprar <ArrowRight size={13} className="ml-1" />
               </button>
             </motion.div>

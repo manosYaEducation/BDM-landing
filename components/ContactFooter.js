@@ -7,7 +7,7 @@ export default function ContactFooter() {
   return (
     <section id="contact">
       {/* Final CTA */}
-      <div className="bg-bdm-gold py-12 relative overflow-hidden">
+      <div className="bg-bdm-red py-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -33,10 +33,10 @@ export default function ContactFooter() {
             transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="bg-bdm-black text-bdm-gold px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
+            <button className="bg-bdm-black text-bdm-red px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
               Solicitar Cotización
             </button>
-            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-bdm-black hover:text-bdm-gold transition-colors duration-300">
+            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-bdm-black hover:text-bdm-red transition-colors duration-300">
               Contactar Equipo BDM
             </button>
           </motion.div>
@@ -49,7 +49,7 @@ export default function ContactFooter() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             {/* Brand Col */}
             <div className="lg:col-span-1">
-              <h2 className="text-4xl font-bebas tracking-wider text-bdm-gold mb-4">
+              <h2 className="text-4xl font-bebas tracking-wider text-bdm-red mb-4">
                 BDM <span className="text-bdm-white">MAESTROS</span>
               </h2>
               <p className="text-gray-400 text-sm mb-6">
@@ -61,12 +61,12 @@ export default function ContactFooter() {
             <div className="lg:col-span-1">
               <h3 className="text-xl font-bebas text-white mb-6 uppercase tracking-widest">Contacto</h3>
               <ul className="space-y-4">
-                <li className="flex items-start text-gray-400 text-sm hover:text-bdm-gold transition-colors">
-                  <Mail className="mr-3 text-bdm-gold shrink-0" size={18} />
+                <li className="flex items-start text-gray-400 text-sm hover:text-bdm-red transition-colors">
+                  <Mail className="mr-3 text-bdm-red shrink-0" size={18} />
                   <span>contacto@bdmfreestyle.com</span>
                 </li>
-                <li className="flex items-start text-gray-400 text-sm hover:text-bdm-gold transition-colors">
-                  <MapPin className="mr-3 text-bdm-gold shrink-0" size={18} />
+                <li className="flex items-start text-gray-400 text-sm hover:text-bdm-red transition-colors">
+                  <MapPin className="mr-3 text-bdm-red shrink-0" size={18} />
                   <span>Santiago, Chile</span>
                 </li>
               </ul>
@@ -76,10 +76,10 @@ export default function ContactFooter() {
             <div className="lg:col-span-1">
               <h3 className="text-xl font-bebas text-white mb-6 uppercase tracking-widest">Enlaces</h3>
               <ul className="space-y-3">
-                <li><a href="#home" className="text-gray-400 text-sm hover:text-bdm-gold transition-colors">Inicio</a></li>
-                <li><a href="#history" className="text-gray-400 text-sm hover:text-bdm-gold transition-colors">Nuestra Historia</a></li>
-                <li><a href="#services" className="text-gray-400 text-sm hover:text-bdm-gold transition-colors">Servicios</a></li>
-                <li><a href="#events" className="text-gray-400 text-sm hover:text-bdm-gold transition-colors">Eventos</a></li>
+                <li><a href="#home" className="text-gray-400 text-sm hover:text-bdm-red transition-colors">Inicio</a></li>
+                <li><a href="#history" className="text-gray-400 text-sm hover:text-bdm-red transition-colors">Nuestra Historia</a></li>
+                <li><a href="#services" className="text-gray-400 text-sm hover:text-bdm-red transition-colors">Servicios</a></li>
+                <li><a href="#events" className="text-gray-400 text-sm hover:text-bdm-red transition-colors">Eventos</a></li>
               </ul>
             </div>
 
@@ -91,11 +91,11 @@ export default function ContactFooter() {
                 <input 
                   type="email" 
                   placeholder="Tu correo electrónico" 
-                  className="w-full bg-bdm-dark border border-gray-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-bdm-gold transition-colors"
+                  className="w-full bg-bdm-dark border border-gray-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-bdm-red transition-colors"
                 />
                 <button 
                   type="submit" 
-                  className="w-full bg-bdm-gold text-bdm-black font-bold uppercase tracking-widest text-sm py-3 hover:bg-white transition-colors"
+                  className="w-full bg-bdm-red text-bdm-black font-bold uppercase tracking-widest text-sm py-3 hover:bg-white transition-colors"
                 >
                   Suscribirse
                 </button>
@@ -108,7 +108,7 @@ export default function ContactFooter() {
               &copy; {new Date().getFullYear()} Batalla de Maestros (BDM). Todos los derechos reservados.
             </p>
             <div className="flex gap-4 text-xs text-gray-500">
-              <a href="#" className="hover:text-bdm-gold transition-colors">bdmfreestyle.com</a>
+              <a href="#" className="hover:text-bdm-red transition-colors">bdmfreestyle.com</a>
             </div>
           </div>
         </div>

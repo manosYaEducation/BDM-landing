@@ -22,7 +22,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-bdm-gold uppercase tracking-[0.3em] font-semibold mb-4 text-sm md:text-base"
+          className="text-bdm-red uppercase tracking-[0.3em] font-semibold mb-4 text-sm md:text-base"
         >
           La red mundial de freestyle, arte urbano y desarrollo cultural nacida en Chile.
         </motion.p>
@@ -34,7 +34,7 @@ export default function Hero() {
           className="text-6xl md:text-9xl font-bebas tracking-wider mb-6 drop-shadow-2xl"
         >
           BATALLA DE <br />
-          <span className="text-bdm-gold">MAESTROS</span>
+          <span className="text-bdm-red">MAESTROS</span>
         </motion.h1>
 
         <motion.p
@@ -54,7 +54,7 @@ export default function Hero() {
         >
           <a
             href="#contact"
-            className="bg-bdm-gold text-bdm-black px-8 py-4 uppercase font-bold tracking-widest hover:bg-white transition-colors duration-300"
+            className="bg-bdm-red text-bdm-black px-8 py-4 uppercase font-bold tracking-widest hover:bg-white transition-colors duration-300"
           >
             Solicitar Información
           </a>
@@ -74,7 +74,7 @@ export default function Hero() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
       >
         <span className="text-xs uppercase tracking-widest text-gray-400 mb-2">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-bdm-gold to-transparent" />
+        <div className="w-[1px] h-12 bg-gradient-to-b from-bdm-red to-transparent" />
       </motion.div>
     </section>
   );

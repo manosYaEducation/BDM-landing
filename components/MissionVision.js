@@ -23,9 +23,9 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 border border-bdm-dark bg-bdm-black/50 hover:border-bdm-gold transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-black/50 hover:border-bdm-red transition-colors duration-500"
           >
-            <h3 className="text-4xl font-bebas text-bdm-gold mb-4">Nuestra Misión</h3>
+            <h3 className="text-4xl font-bebas text-bdm-red mb-4">Nuestra Misión</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
               Crear oportunidades para artistas y jóvenes de cualquier origen mediante herramientas artísticas, educativas y de networking.
             </p>
@@ -36,9 +36,9 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 border border-bdm-dark bg-bdm-black/50 hover:border-bdm-gold transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-black/50 hover:border-bdm-red transition-colors duration-500"
           >
-            <h3 className="text-4xl font-bebas text-bdm-gold mb-4">Nuestra Visión</h3>
+            <h3 className="text-4xl font-bebas text-bdm-red mb-4">Nuestra Visión</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
               Consolidar una red internacional de desarrollo cultural basada en el talento, el respeto, la diversidad y la excelencia.
             </p>
@@ -47,7 +47,7 @@ export default function MissionVision() {
 
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-5xl font-bebas text-white tracking-wider">Nuestros Valores</h3>
-          <div className="w-16 h-1 bg-bdm-gold mx-auto mt-4"></div>
+          <div className="w-16 h-1 bg-bdm-red mx-auto mt-4"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -58,9 +58,9 @@ export default function MissionVision() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="flex flex-col items-center justify-center p-6 bg-bdm-dark/50 border border-bdm-dark/50 hover:border-bdm-gold hover:bg-bdm-gold hover:text-bdm-black text-gray-300 transition-all duration-300 group"
+              className="flex flex-col items-center justify-center p-6 bg-bdm-dark/50 border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
             >
-              <div className="mb-4 text-bdm-gold group-hover:text-bdm-black transition-colors duration-300">
+              <div className="mb-4 text-bdm-red group-hover:text-bdm-black transition-colors duration-300">
                 {val.icon}
               </div>
               <span className="font-bebas tracking-wider text-xl uppercase">{val.name}</span>

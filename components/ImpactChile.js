@@ -24,9 +24,9 @@ export default function ImpactChile() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bebas text-white mb-4 uppercase"
           >
-            Impacto en <span className="text-bdm-gold">Chile</span>
+            Impacto en <span className="text-bdm-red">Chile</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-bdm-gold mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-bdm-red mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             El territorio donde nació todo. Nuestro circuito local sigue siendo la base del talento que luego conquista el mundo.
           </p>
@@ -40,9 +40,9 @@ export default function ImpactChile() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-bdm-dark/40 border border-bdm-dark hover:border-bdm-gold p-6 text-center group transition-all duration-300"
+              className="bg-bdm-dark/40 border border-bdm-dark hover:border-bdm-red p-6 text-center group transition-all duration-300"
             >
-              <div className="text-bdm-gold flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-bdm-red flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
               <h3 className="text-4xl font-bebas text-white mb-2">{stat.value}</h3>

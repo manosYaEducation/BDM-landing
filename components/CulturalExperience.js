@@ -191,9 +191,9 @@ export default function CulturalExperience() {
               className="text-4xl md:text-6xl font-bebas text-white mb-6 uppercase leading-none"
             >
               Experiencia <br />
-              <span className="text-bdm-gold">Cultural</span>
+              <span className="text-bdm-red">Cultural</span>
             </motion.h2>
-            <div className="w-16 h-1 bg-bdm-gold mb-8"></div>
+            <div className="w-16 h-1 bg-bdm-red mb-8"></div>
             <p className="text-gray-400">
               BDM es un ecosistema 360º que abarca todas las disciplinas de la cultura Hip Hop y urbana, impulsando no solo competencias, sino toda una industria alrededor del talento.
             </p>
@@ -208,7 +208,7 @@ export default function CulturalExperience() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.06 }}
-                  className="aspect-square bg-bdm-dark/50 border border-bdm-dark flex flex-col items-center justify-center p-4 text-center hover:border-bdm-gold hover:bg-bdm-gold hover:text-bdm-black text-gray-300 transition-all duration-300 group cursor-default overflow-hidden"
+                  className="aspect-square bg-bdm-dark/50 border border-bdm-dark flex flex-col items-center justify-center p-4 text-center hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group cursor-default overflow-hidden"
                 >
                   <span className="font-bebas tracking-wider text-lg uppercase mb-2 leading-tight">{item}</span>
                   <div className="text-gray-500 group-hover:text-bdm-black transition-colors duration-300">

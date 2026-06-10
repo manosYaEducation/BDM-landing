@@ -51,9 +51,9 @@ export default function ServicesValues() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 border border-bdm-dark bg-bdm-dark/20 hover:border-bdm-gold transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-dark/20 hover:border-bdm-red transition-colors duration-500"
           >
-            <h3 className="text-3xl font-bebas text-bdm-gold mb-3">Nuestra Misión</h3>
+            <h3 className="text-3xl font-bebas text-bdm-red mb-3">Nuestra Misión</h3>
             <p className="text-gray-400 leading-relaxed">
               Crear oportunidades para artistas y jóvenes de cualquier origen mediante herramientas artísticas, educativas y de networking.
             </p>
@@ -64,9 +64,9 @@ export default function ServicesValues() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 border border-bdm-dark bg-bdm-dark/20 hover:border-bdm-gold transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-dark/20 hover:border-bdm-red transition-colors duration-500"
           >
-            <h3 className="text-3xl font-bebas text-bdm-gold mb-3">Nuestra Visión</h3>
+            <h3 className="text-3xl font-bebas text-bdm-red mb-3">Nuestra Visión</h3>
             <p className="text-gray-400 leading-relaxed">
               Consolidar una red internacional de desarrollo cultural basada en el talento, el respeto, la diversidad y la excelencia.
             </p>
@@ -81,7 +81,7 @@ export default function ServicesValues() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bebas text-white mb-6"
           >
-            LO QUE <span className="text-bdm-gold">SOMOS</span>
+            LO QUE <span className="text-bdm-red">SOMOS</span>
           </motion.h2>
 
           <div className="flex justify-center gap-4 mb-8">
@@ -89,8 +89,8 @@ export default function ServicesValues() {
               onClick={() => setActiveTab("values")}
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "values"
-                  ? "bg-bdm-gold text-bdm-black"
-                  : "border border-bdm-gold text-bdm-gold hover:bg-bdm-gold/20"
+                  ? "bg-bdm-red text-bdm-black"
+                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
               }`}
             >
               Nuestros Valores
@@ -99,8 +99,8 @@ export default function ServicesValues() {
               onClick={() => setActiveTab("services")}
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "services"
-                  ? "bg-bdm-gold text-bdm-black"
-                  : "border border-bdm-gold text-bdm-gold hover:bg-bdm-gold/20"
+                  ? "bg-bdm-red text-bdm-black"
+                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
               }`}
             >
               Nuestros Servicios
@@ -126,16 +126,16 @@ export default function ServicesValues() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="group bg-bdm-dark/30 border border-bdm-dark hover:border-bdm-gold p-8 transition-colors duration-300 relative overflow-hidden"
+                    className="group bg-bdm-dark/30 border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-b from-bdm-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="text-bdm-gold mb-5 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
+                    <div className="absolute inset-0 bg-gradient-to-b from-bdm-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="text-bdm-red mb-5 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
                       {service.icon}
                     </div>
                     <h3 className="text-3xl font-bebas text-white mb-5 relative z-10">{service.title}</h3>
                     <ul className="space-y-2 relative z-10">
                       {service.items.map((item, i) => (
-                        <li key={i} className="text-gray-400 text-sm flex items-center before:content-[''] before:w-1.5 before:h-1.5 before:bg-bdm-gold before:mr-3 before:rounded-full before:shrink-0">
+                        <li key={i} className="text-gray-400 text-sm flex items-center before:content-[''] before:w-1.5 before:h-1.5 before:bg-bdm-red before:mr-3 before:rounded-full before:shrink-0">
                           {item}
                         </li>
                       ))}
@@ -160,9 +160,9 @@ export default function ServicesValues() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.07 }}
-                    className="flex flex-col items-center justify-center p-6 bg-bdm-dark/50 border border-bdm-dark/50 hover:border-bdm-gold hover:bg-bdm-gold hover:text-bdm-black text-gray-300 transition-all duration-300 group"
+                    className="flex flex-col items-center justify-center p-6 bg-bdm-dark/50 border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
                   >
-                    <div className="mb-3 text-bdm-gold group-hover:text-bdm-black transition-colors duration-300">
+                    <div className="mb-3 text-bdm-red group-hover:text-bdm-black transition-colors duration-300">
                       {val.icon}
                     </div>
                     <span className="font-bebas tracking-wider text-xl uppercase text-center">{val.name}</span>

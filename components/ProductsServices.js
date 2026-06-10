@@ -37,7 +37,7 @@ export default function ProductsServices() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bebas text-white mb-4 uppercase"
           >
-            Nuestros <span className="text-bdm-gold">Servicios</span>
+            Nuestros <span className="text-bdm-red">Servicios</span>
           </motion.h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             El ecosistema completo de BDM para desarrollar el talento y la cultura urbana desde todos los ángulos.
@@ -52,12 +52,12 @@ export default function ProductsServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="group bg-bdm-dark/30 border border-bdm-dark hover:border-bdm-gold p-8 transition-colors duration-300 relative overflow-hidden"
+              className="group bg-bdm-dark/30 border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
             >
               {/* Highlight gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-b from-bdm-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-bdm-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="text-bdm-gold mb-6 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
+              <div className="text-bdm-red mb-6 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
                 {service.icon}
               </div>
               
@@ -65,7 +65,7 @@ export default function ProductsServices() {
               
               <ul className="space-y-3 relative z-10">
                 {service.items.map((item, i) => (
-                  <li key={i} className="text-gray-400 text-sm flex items-center before:content-[''] before:w-1.5 before:h-1.5 before:bg-bdm-gold before:mr-3 before:rounded-full">
+                  <li key={i} className="text-gray-400 text-sm flex items-center before:content-[''] before:w-1.5 before:h-1.5 before:bg-bdm-red before:mr-3 before:rounded-full">
                     {item}
                   </li>
                 ))}

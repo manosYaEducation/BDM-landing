@@ -31,7 +31,7 @@ const AnimatedCounter = ({ end, duration = 2, label, suffix = "", prefix = "" })
 
   return (
     <div className="flex flex-col items-center p-4">
-      <h4 className="text-3xl md:text-4xl font-bebas text-bdm-gold mb-2 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+      <h4 className="text-3xl md:text-4xl font-bebas text-bdm-red mb-2 drop-shadow-[0_0_15px_rgba(168,28,36,0.4)]">
         {prefix}{count}{suffix}
       </h4>
       <p className="text-gray-400 uppercase tracking-widest text-xs md:text-sm font-semibold text-center">{label}</p>
@@ -62,7 +62,7 @@ export default function ImpactStats() {
 
   return (
     <section id="global-impact" className="py-24 bg-bdm-black border-y border-bdm-dark relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-bdm-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-bdm-red/5 blur-[120px] rounded-full pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-10">
@@ -72,7 +72,7 @@ export default function ImpactStats() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bebas text-white mb-6"
           >
-            NUESTRO <span className="text-bdm-gold">ALCANCE</span>
+            NUESTRO <span className="text-bdm-red">ALCANCE</span>
           </motion.h2>
 
           <div className="flex justify-center gap-4 mb-8">
@@ -80,8 +80,8 @@ export default function ImpactStats() {
               onClick={() => setActiveTab("global")}
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "global"
-                  ? "bg-bdm-gold text-bdm-black"
-                  : "border border-bdm-gold text-bdm-gold hover:bg-bdm-gold/20"
+                  ? "bg-bdm-red text-bdm-black"
+                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
               }`}
             >
               Impacto Global
@@ -90,8 +90,8 @@ export default function ImpactStats() {
               onClick={() => setActiveTab("chile")}
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "chile"
-                  ? "bg-bdm-gold text-bdm-black"
-                  : "border border-bdm-gold text-bdm-gold hover:bg-bdm-gold/20"
+                  ? "bg-bdm-red text-bdm-black"
+                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
               }`}
             >
               Impacto en Chile
@@ -126,8 +126,8 @@ export default function ImpactStats() {
                 className="grid grid-cols-2 md:grid-cols-5 gap-6"
               >
                 {chileStats.map((stat, idx) => (
-                  <div key={`chile-${idx}`} className="bg-bdm-dark/40 border border-bdm-dark hover:border-bdm-gold p-4 text-center group transition-all duration-300 flex flex-col items-center">
-                    <div className="text-bdm-gold flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <div key={`chile-${idx}`} className="bg-bdm-dark/40 border border-bdm-dark hover:border-bdm-red p-4 text-center group transition-all duration-300 flex flex-col items-center">
+                    <div className="text-bdm-red flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                       {stat.icon}
                     </div>
                     <AnimatedCounter end={stat.end} label={stat.label} suffix={stat.suffix} />

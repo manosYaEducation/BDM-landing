@@ -30,7 +30,7 @@ const AnimatedCounter = ({ end, duration = 2, label, suffix = "" }) => {
 
   return (
     <div className="flex flex-col items-center p-6">
-      <h4 className="text-5xl md:text-7xl font-bebas text-bdm-gold mb-2 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+      <h4 className="text-5xl md:text-7xl font-bebas text-bdm-red mb-2 drop-shadow-[0_0_15px_rgba(168,28,36,0.4)]">
         {count}{suffix}
       </h4>
       <p className="text-gray-400 uppercase tracking-widest text-sm md:text-base font-semibold text-center">{label}</p>
@@ -42,7 +42,7 @@ export default function Stats() {
   return (
     <section id="stats" className="py-24 bg-bdm-black border-y border-bdm-dark relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-bdm-gold/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-bdm-red/5 blur-[120px] rounded-full pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
@@ -52,7 +52,7 @@ export default function Stats() {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bebas text-white mb-4"
           >
-            NUESTRO <span className="text-bdm-gold">ALCANCE</span>
+            NUESTRO <span className="text-bdm-red">ALCANCE</span>
           </motion.h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Números que respaldan el impacto de BDM en la cultura y el entretenimiento a nivel global.

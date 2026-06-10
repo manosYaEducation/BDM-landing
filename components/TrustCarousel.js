@@ -16,7 +16,7 @@ export default function TrustCarousel() {
   const duplicatedLogos = [...logos, ...logos, ...logos];
 
   return (
-    <section className="py-20 bg-bdm-gold overflow-hidden">
+    <section className="py-20 bg-bdm-red overflow-hidden">
       <div className="container mx-auto px-6 mb-10 text-center">
         <h2 className="text-3xl md:text-5xl font-bebas text-bdm-black uppercase">Confían en BDM</h2>
       </div>
