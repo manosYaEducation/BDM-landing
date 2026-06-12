@@ -6,35 +6,36 @@ import { ArrowRight, Ticket, Eye, Users, Globe2 } from "lucide-react";
 const events = [
   {
     title: "Zonal Beatbox",
-    ticketPrice: "$3.000.000",
+    ticketPrice: "Desde $100.000",
     audience: "300 - 500 personas",
     participants: "16 competidores",
     reach: "Local / Zonal",
   },
   {
     title: "Selectivo Zonal Freestyle",
-    ticketPrice: "$5.000.000",
+    ticketPrice: "Desde $120.000",
     audience: "500 - 1.000 personas",
     participants: "32 competidores",
     reach: "Local / Zonal",
   },
   {
     title: "Final Regional",
-    ticketPrice: "$7.000.000",
+    ticketPrice: "Desde $140.000",
     audience: "1.000 - 2.000 personas",
     participants: "16 campeones zonales",
     reach: "Regional",
+    featured: true,
   },
   {
     title: "Final Nacional BDM Gold",
-    ticketPrice: "$9.000.000",
+    ticketPrice: "Desde $160.000",
     audience: "3.000 - 5.000 personas",
     participants: "16 campeones regionales",
     reach: "Nacional + Intl.",
   },
   {
     title: "Final Mundial BDM Deluxe",
-    ticketPrice: "$15.000.000",
+    ticketPrice: "Desde $180.000",
     audience: "10.000+ personas",
     participants: "20 países",
     reach: "Global",
@@ -67,35 +68,27 @@ export default function AvailableEvents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-<<<<<<< HEAD
-              className="p-5 flex flex-col h-full bg-bdm-black border border-bdm-dark text-white transition-all duration-300 hover:-translate-y-2 hover:bg-bdm-red hover:text-bdm-black hover:border-bdm-red group"
-=======
               className={`p-5 flex flex-col h-full ${evt.featured ? 'bg-bdm-red text-bdm-black border-2 border-bdm-red' : 'bg-transparent border border-bdm-dark text-white'} transition-transform duration-300 hover:-translate-y-2`}
->>>>>>> origin/Feature/JMurillo/2026-06-10/Cambio-fotos-BDM
             >
               <h3 className="text-xl font-bebas mb-1 uppercase leading-tight">{evt.title}</h3>
-              <p className="font-bold mb-4 text-lg text-bdm-red group-hover:text-bdm-black">{evt.ticketPrice}</p>
+              <p className={`font-bold mb-4 text-lg ${evt.featured ? 'text-bdm-black' : 'text-bdm-red'}`}>{evt.ticketPrice}</p>
 
               <div className="space-y-2 mb-5 flex-grow">
                 <div className="flex items-center text-xs">
-                  <Ticket size={13} className="mr-2 shrink-0 text-gray-500 group-hover:text-bdm-black" />
-                  <span className="text-gray-300 group-hover:text-bdm-black group-hover:font-medium">{evt.audience}</span>
+                  <Ticket size={13} className={`mr-2 shrink-0 ${evt.featured ? 'text-bdm-black' : 'text-gray-500'}`} />
+                  <span className={evt.featured ? 'font-medium' : 'text-gray-300'}>{evt.audience}</span>
                 </div>
                 <div className="flex items-center text-xs">
-                  <Users size={13} className="mr-2 shrink-0 text-gray-500 group-hover:text-bdm-black" />
-                  <span className="text-gray-300 group-hover:text-bdm-black group-hover:font-medium">{evt.participants}</span>
+                  <Users size={13} className={`mr-2 shrink-0 ${evt.featured ? 'text-bdm-black' : 'text-gray-500'}`} />
+                  <span className={evt.featured ? 'font-medium' : 'text-gray-300'}>{evt.participants}</span>
                 </div>
                 <div className="flex items-center text-xs">
-                  <Globe2 size={13} className="mr-2 shrink-0 text-gray-500 group-hover:text-bdm-black" />
-                  <span className="text-gray-300 group-hover:text-bdm-black group-hover:font-medium">{evt.reach}</span>
+                  <Globe2 size={13} className={`mr-2 shrink-0 ${evt.featured ? 'text-bdm-black' : 'text-gray-500'}`} />
+                  <span className={evt.featured ? 'font-medium' : 'text-gray-300'}>{evt.reach}</span>
                 </div>
               </div>
 
-<<<<<<< HEAD
-              <button className="w-full py-2 uppercase tracking-wider text-xs font-bold flex items-center justify-center transition-colors duration-300 border border-bdm-red text-bdm-red group-hover:bg-bdm-black group-hover:text-bdm-red hover:bg-neutral-800 hover:text-bdm-red">
-=======
               <button className={`w-full py-2 uppercase tracking-wider text-xs font-bold flex items-center justify-center transition-colors duration-300 ${evt.featured ? 'border border-bdm-black text-bdm-black hover:bg-white hover:text-bdm-black' : 'border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black'}`}>
->>>>>>> origin/Feature/JMurillo/2026-06-10/Cambio-fotos-BDM
                 Comprar <ArrowRight size={13} className="ml-1" />
               </button>
             </motion.div>

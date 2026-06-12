@@ -1,8 +1,8 @@
 "use client";
- 
+
 import { useState } from "react";
 import { motion } from "framer-motion";
- 
+
 const steps = [
   {
     stage: "Etapa 1",
@@ -26,7 +26,7 @@ const steps = [
     description: "BDM Deluxe es la cumbre del campeonato. Los mejores competidores de más de 20 países se enfrentan en una final mundial que otorga reconocimiento internacional y consagra al campeón absoluto de BDM.",
   },
 ];
- 
+
 export default function PathToChampion() {
   const [flippedIndex, setFlippedIndex] = useState(null);
 
@@ -36,9 +36,7 @@ export default function PathToChampion() {
 
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
-      {/* Ambient Red Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] blur-[150px] rounded-full pointer-events-none"></div>
-
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-bdm-red/5 blur-[150px] rounded-full pointer-events-none"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
@@ -61,8 +59,7 @@ export default function PathToChampion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2, duration: 0.6 }}
-<<<<<<< HEAD
-                className="flex flex-col bg-bdm-black/40 backdrop-blur-sm border border-bdm-black hover:border-bdm-red/40 rounded-2xl transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
+                className="flex flex-col bg-transparent backdrop-blur-sm border border-bdm-red/30 hover:border-bdm-red/40 rounded-2xl transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
                 style={{ perspective: "1000px" }}
               >
                 <div
@@ -78,8 +75,7 @@ export default function PathToChampion() {
                     className="w-full h-full flex flex-col"
                     style={{ backfaceVisibility: "hidden" }}
                   >
-                    <div className="relative h-44 w-full bg-bdm-black/30 flex items-center justify-center p-6 border-b border-bdm-black/40 overflow-hidden rounded-t-2xl">
-                      <div className="absolute inset-0 bg-gradient-to-t from-bdm-black/60 to-transparent z-10" />
+                    <div className="relative h-44 w-full bg-transparent flex items-center justify-center p-6 border-b border-bdm-red/30 overflow-hidden rounded-t-2xl">
                       <img
                         src={step.image}
                         alt={step.title}
@@ -105,22 +101,10 @@ export default function PathToChampion() {
                       </div>
                     </div>
                   </div>
-=======
-                className="flex flex-col bg-transparent backdrop-blur-sm border border-bdm-red/30 hover:border-bdm-red/40 rounded-2xl overflow-hidden transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
-              >
-                {/* Logo Container */}
-                <div className="relative h-44 w-full bg-transparent flex items-center justify-center p-6 border-b border-bdm-red/30 overflow-hidden">
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="max-h-28 max-w-full object-contain relative z-20 transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
->>>>>>> origin/Feature/JMurillo/2026-06-10/Cambio-fotos-BDM
 
                   {/* Back Face */}
                   <div
-                    className="absolute inset-0 p-6 flex flex-col items-center justify-center bg-gradient-to-b from-bdm-black/60 to-bdm-black/40 rounded-2xl"
+                    className="absolute inset-0 p-6 flex flex-col items-center justify-center bg-gradient-to-b from-transparent to-transparent rounded-2xl"
                     style={{
                       backfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
@@ -137,7 +121,7 @@ export default function PathToChampion() {
 
                 <button
                   onClick={() => handleFlip(idx)}
-                  className="w-full py-2.5 text-xs font-bold uppercase tracking-wider text-bdm-red border-t border-bdm-black/40 hover:bg-bdm-red hover:text-bdm-black transition-colors duration-300 rounded-b-2xl"
+                  className="w-full py-2.5 text-xs font-bold uppercase tracking-wider text-bdm-red border-t border-bdm-red/30 hover:bg-bdm-red hover:text-white transition-colors duration-300 rounded-b-2xl"
                 >
                   {flippedIndex === idx ? "Ver menos" : "Ver más"}
                 </button>

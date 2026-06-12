@@ -11,22 +11,24 @@
   --font-bebas: var(--font-bebas-neue);
 }
 
-body {
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
   background-color: var(--color-bdm-black);
   background-image: url("/bdm-background.jpg");
   background-attachment: fixed;
   background-size: 100% auto;
   background-position: top center;
   background-repeat: repeat-y;
+}
+
+body {
+  min-height: 100%;
+  background: transparent;
   color: var(--color-bdm-white);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Custom Utilities for smooth scroll */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Gallery carousel marquee */
