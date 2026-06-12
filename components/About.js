@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-bdm-dark relative">
+    <section id="about" className="py-24 bg-transparent relative">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Image Side */}
@@ -18,7 +18,7 @@ export default function About() {
             <div className="relative aspect-[4/5] max-w-md mx-auto">
               <div className="absolute inset-0 bg-bdm-red translate-x-4 translate-y-4 z-0"></div>
               <img
-                src="/about_image.png"
+                src="/BDM-rap.png"
                 alt="Rapper performing"
                 className="relative z-10 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
@@ -40,7 +40,7 @@ export default function About() {
               Del barrio al <span className="text-bdm-red">mundo</span>
             </h2>
             <div className="w-20 h-1 bg-bdm-red mb-8"></div>
-            
+
             <div className="space-y-6 text-gray-400 text-lg">
               <p>
                 Batalla de Maestros nació en los sectores populares del sur de Santiago de Chile.

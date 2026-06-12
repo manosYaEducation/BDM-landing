@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       lang="es"
       className={`${montserrat.variable} ${bebasNeue.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-bdm-black text-bdm-white">{children}</body>
+      <body className="min-h-full flex flex-col font-sans text-bdm-white">{children}</body>
     </html>
   );
 }

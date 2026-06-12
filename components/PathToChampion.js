@@ -35,9 +35,9 @@ export default function PathToChampion() {
   };
 
   return (
-    <section className="py-24 bg-bdm-dark relative overflow-hidden">
+    <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Ambient Red Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-bdm-red/5 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] blur-[150px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
@@ -61,6 +61,7 @@ export default function PathToChampion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2, duration: 0.6 }}
+<<<<<<< HEAD
                 className="flex flex-col bg-bdm-black/40 backdrop-blur-sm border border-bdm-black hover:border-bdm-red/40 rounded-2xl transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
                 style={{ perspective: "1000px" }}
               >
@@ -104,6 +105,18 @@ export default function PathToChampion() {
                       </div>
                     </div>
                   </div>
+=======
+                className="flex flex-col bg-transparent backdrop-blur-sm border border-bdm-red/30 hover:border-bdm-red/40 rounded-2xl overflow-hidden transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
+              >
+                {/* Logo Container */}
+                <div className="relative h-44 w-full bg-transparent flex items-center justify-center p-6 border-b border-bdm-red/30 overflow-hidden">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="max-h-28 max-w-full object-contain relative z-20 transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+>>>>>>> origin/Feature/JMurillo/2026-06-10/Cambio-fotos-BDM
 
                   {/* Back Face */}
                   <div

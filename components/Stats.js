@@ -40,9 +40,9 @@ const AnimatedCounter = ({ end, duration = 2, label, suffix = "" }) => {
 
 export default function Stats() {
   return (
-    <section id="stats" className="py-24 bg-bdm-black border-y border-bdm-dark relative overflow-hidden">
+    <section id="stats" className="py-24 bg-transparent border-y border-bdm-dark relative overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-bdm-red/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] blur-[120px] rounded-full pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">

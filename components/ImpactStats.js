@@ -61,8 +61,8 @@ export default function ImpactStats() {
   ];
 
   return (
-    <section id="global-impact" className="py-24 bg-bdm-black border-y border-bdm-dark relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-bdm-red/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <section id="global-impact" className="py-24 bg-transparent border-y border-bdm-dark relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] blur-[120px] rounded-full pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-10">
@@ -126,7 +126,7 @@ export default function ImpactStats() {
                 className="grid grid-cols-2 md:grid-cols-5 gap-6"
               >
                 {chileStats.map((stat, idx) => (
-                  <div key={`chile-${idx}`} className="bg-bdm-dark/40 border border-bdm-dark hover:border-bdm-red p-4 text-center group transition-all duration-300 flex flex-col items-center">
+                  <div key={`chile-${idx}`} className="bg-transparent border border-bdm-dark hover:border-bdm-red p-4 text-center group transition-all duration-300 flex flex-col items-center">
                     <div className="text-bdm-red flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                       {stat.icon}
                     </div>

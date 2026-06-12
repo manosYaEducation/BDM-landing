@@ -8,12 +8,12 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero_bg.png"
+          src="/BDM-presentacion.png"
           alt="BDM Freestyle Battle"
-          className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-10000"
+          className="w-full h-full object-cover object-center opacity-100"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-bdm-black/60 via-bdm-black/40 to-bdm-black" />
+        <div className="absolute inset-0 bg-transparent" />
       </div>
 
       {/* Content */}
@@ -26,7 +26,7 @@ export default function Hero() {
         >
           La red mundial de freestyle, arte urbano y desarrollo cultural nacida en Chile.
         </motion.p>
-        
+
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

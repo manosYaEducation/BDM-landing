@@ -42,7 +42,7 @@ export default function ServicesValues() {
   const [activeTab, setActiveTab] = useState("values");
 
   return (
-    <section id="services" className="py-24 bg-bdm-black border-t border-bdm-dark relative">
+    <section id="services" className="py-24 bg-transparent border-t border-bdm-dark relative">
       <div className="container mx-auto px-6">
 
         {/* Mission / Vision - ABOVE title */}
@@ -51,7 +51,7 @@ export default function ServicesValues() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 border border-bdm-dark bg-bdm-dark/20 hover:border-bdm-red transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-transparent hover:border-bdm-red transition-colors duration-500"
           >
             <h3 className="text-3xl font-bebas text-bdm-red mb-3">Nuestra Misión</h3>
             <p className="text-gray-400 leading-relaxed">
@@ -64,7 +64,7 @@ export default function ServicesValues() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 border border-bdm-dark bg-bdm-dark/20 hover:border-bdm-red transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-transparent hover:border-bdm-red transition-colors duration-500"
           >
             <h3 className="text-3xl font-bebas text-bdm-red mb-3">Nuestra Visión</h3>
             <p className="text-gray-400 leading-relaxed">
@@ -126,9 +126,8 @@ export default function ServicesValues() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="group bg-bdm-dark/30 border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
+                    className="group bg-transparent border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-b from-bdm-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="text-bdm-red mb-5 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
                       {service.icon}
                     </div>
@@ -160,7 +159,7 @@ export default function ServicesValues() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.07 }}
-                    className="flex flex-col items-center justify-center p-6 bg-bdm-dark/50 border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
+                    className="flex flex-col items-center justify-center p-6 bg-transparent border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
                   >
                     <div className="mb-3 text-bdm-red group-hover:text-bdm-black transition-colors duration-300">
                       {val.icon}

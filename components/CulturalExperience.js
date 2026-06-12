@@ -180,7 +180,7 @@ const items = [
 
 export default function CulturalExperience() {
   return (
-    <section className="py-24 bg-bdm-black border-t border-bdm-dark relative overflow-hidden">
+    <section className="py-24 bg-transparent border-t border-bdm-dark relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           <div className="w-full lg:w-1/3 lg:pt-4">
@@ -208,7 +208,7 @@ export default function CulturalExperience() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.06 }}
-                  className="aspect-square bg-bdm-dark/50 border border-bdm-dark flex flex-col items-center justify-center p-4 text-center hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group cursor-default overflow-hidden"
+                  className="aspect-square bg-transparent border border-bdm-dark flex flex-col items-center justify-center p-4 text-center hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group cursor-default overflow-hidden"
                 >
                   <span className="font-bebas tracking-wider text-lg uppercase mb-2 leading-tight">{item}</span>
                   <div className="text-gray-500 group-hover:text-bdm-black transition-colors duration-300">
