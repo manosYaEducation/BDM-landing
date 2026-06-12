@@ -13,8 +13,8 @@ const chileStats = [
 
 export default function ImpactChile() {
   return (
-    <section className="py-24 bg-bdm-black border-t border-bdm-dark relative overflow-hidden">
-      <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-bdm-dark to-transparent opacity-50 pointer-events-none"></div>
+    <section className="py-24 bg-transparent border-t border-bdm-dark relative overflow-hidden">
+      <div className="absolute right-0 top-0 w-1/3 h-full opacity-50 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
@@ -40,7 +40,7 @@ export default function ImpactChile() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-bdm-dark/40 border border-bdm-dark hover:border-bdm-red p-6 text-center group transition-all duration-300"
+              className="bg-transparent border border-bdm-dark hover:border-bdm-red p-6 text-center group transition-all duration-300"
             >
               <div className="text-bdm-red flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}

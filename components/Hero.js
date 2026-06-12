@@ -10,10 +10,10 @@ export default function Hero() {
         <img
           src="/BDM-presentacion.png"
           alt="BDM Freestyle Battle"
-          className="w-full h-full object-cover opacity-60 scale-105 transform hover:scale-100 transition-transform duration-10000"
+          className="w-full h-full object-cover object-center opacity-100"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-bdm-black/60 via-bdm-black/40 to-bdm-black" />
+        <div className="absolute inset-0 bg-transparent" />
       </div>
 
       {/* Content */}

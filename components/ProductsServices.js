@@ -28,7 +28,7 @@ const services = [
 
 export default function ProductsServices() {
   return (
-    <section id="services" className="py-24 bg-bdm-black relative">
+    <section id="services" className="py-24 bg-transparent relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2
@@ -52,10 +52,9 @@ export default function ProductsServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="group bg-bdm-dark/30 border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
+              className="group bg-transparent border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
             >
               {/* Highlight gradient on hover */}
-              <div className="absolute inset-0 bg-gradient-to-b from-bdm-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               <div className="text-bdm-red mb-6 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
                 {service.icon}

@@ -44,11 +44,7 @@ const events = [
 
 export default function AvailableEvents() {
   return (
-    <section id="events" className="py-24 bg-bdm-dark relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img src="/sponsor_bg.png" alt="Events background" className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
-      </div>
-
+    <section id="events" className="py-24 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.h2
@@ -72,7 +68,7 @@ export default function AvailableEvents() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`p-5 flex flex-col h-full ${evt.featured ? 'bg-bdm-red text-bdm-black border-2 border-bdm-red' : 'bg-bdm-black border border-bdm-dark text-white'} transition-transform duration-300 hover:-translate-y-2`}
+              className={`p-5 flex flex-col h-full ${evt.featured ? 'bg-bdm-red text-bdm-black border-2 border-bdm-red' : 'bg-transparent border border-bdm-dark text-white'} transition-transform duration-300 hover:-translate-y-2`}
             >
               <h3 className="text-xl font-bebas mb-1 uppercase leading-tight">{evt.title}</h3>
               <p className={`font-bold mb-4 text-lg ${evt.featured ? 'text-bdm-black' : 'text-bdm-red'}`}>{evt.ticketPrice}</p>
@@ -92,7 +88,7 @@ export default function AvailableEvents() {
                 </div>
               </div>
 
-              <button className={`w-full py-2 uppercase tracking-wider text-xs font-bold flex items-center justify-center transition-colors duration-300 ${evt.featured ? 'bg-bdm-black text-bdm-red hover:bg-white hover:text-bdm-black' : 'border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black'}`}>
+              <button className={`w-full py-2 uppercase tracking-wider text-xs font-bold flex items-center justify-center transition-colors duration-300 ${evt.featured ? 'border border-bdm-black text-bdm-black hover:bg-white hover:text-bdm-black' : 'border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black'}`}>
                 Comprar <ArrowRight size={13} className="ml-1" />
               </button>
             </motion.div>

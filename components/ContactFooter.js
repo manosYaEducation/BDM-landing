@@ -33,10 +33,10 @@ export default function ContactFooter() {
             transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="bg-bdm-black text-bdm-red px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
+            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
               Solicitar Cotización
             </button>
-            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-bdm-black hover:text-bdm-red transition-colors duration-300">
+            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
               Contactar Equipo BDM
             </button>
           </motion.div>
@@ -44,7 +44,7 @@ export default function ContactFooter() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-bdm-black pt-20 pb-10 border-t border-bdm-dark">
+      <footer className="bg-transparent pt-20 pb-10 border-t border-bdm-dark">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             {/* Brand Col */}
@@ -91,7 +91,7 @@ export default function ContactFooter() {
                 <input 
                   type="email" 
                   placeholder="Tu correo electrónico" 
-                  className="w-full bg-bdm-dark border border-gray-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-bdm-red transition-colors"
+                  className="w-full bg-transparent border border-gray-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-bdm-red transition-colors"
                 />
                 <button 
                   type="submit" 
