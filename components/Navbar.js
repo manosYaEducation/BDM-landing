@@ -17,7 +17,8 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Historia", href: "#history" },
+    { name: "Inicio", href: "#home" },
+    { name: "Historia", href: "#about" },
     { name: "Servicios", href: "#services" },
     { name: "Impacto", href: "#global-impact" },
     { name: "Eventos", href: "#events" },
@@ -32,14 +33,14 @@ export default function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center">
+      <div className="w-full px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="text-3xl font-bebas tracking-wider text-bdm-red">
           BDM <span className="text-bdm-white">MAESTROS</span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex gap-5 items-center">
           {navLinks.map((link) => (
             <a
               key={link.name}
