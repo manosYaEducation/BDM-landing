@@ -73,7 +73,7 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
       >
-        <span className="text-xs uppercase tracking-widest text-gray-400 mb-2">Scroll</span>
+        <span className="text-xs uppercase tracking-widest text-bdm-black mb-2">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-bdm-red to-transparent" />
       </motion.div>
     </section>
