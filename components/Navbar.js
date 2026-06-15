@@ -44,14 +44,14 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm uppercase tracking-widest font-semibold hover:text-bdm-red transition-colors duration-300"
+              className="text-sm uppercase tracking-widest font-semibold text-bdm-black hover:text-bdm-red transition-colors duration-300"
             >
               {link.name}
             </a>
           ))}
           <a
             href="#contact"
-            className="px-6 py-2 border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black transition-colors duration-300 uppercase text-sm font-semibold"
+            className="px-6 py-2 border border-bdm-black text-bdm-black hover:bg-bdm-black hover:text-white transition-colors duration-300 uppercase text-sm font-semibold"
           >
             Contacto
           </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="p-4 border-b border-bdm-dark uppercase tracking-widest text-sm text-center"
+              className="p-4 border-b border-bdm-dark uppercase tracking-widest text-sm text-center text-bdm-black"
             >
               {link.name}
             </a>

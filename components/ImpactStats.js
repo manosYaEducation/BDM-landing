@@ -30,7 +30,7 @@ const AnimatedCounter = ({ end, duration = 2, label, suffix = "", prefix = "" })
   }, [end, duration]);
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center p-4 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark rounded-lg">
       <h4 className="text-3xl md:text-4xl font-bebas text-bdm-red mb-2 drop-shadow-[0_0_15px_rgba(168,28,36,0.4)]">
         {prefix}{count}{suffix}
       </h4>
@@ -81,7 +81,7 @@ export default function ImpactStats() {
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "global"
                   ? "bg-bdm-red text-bdm-black"
-                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
+                  : "bg-bdm-black border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black"
               }`}
             >
               Impacto Global
@@ -91,7 +91,7 @@ export default function ImpactStats() {
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "chile"
                   ? "bg-bdm-red text-bdm-black"
-                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
+                  : "bg-bdm-black border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black"
               }`}
             >
               Impacto en Chile
@@ -126,7 +126,7 @@ export default function ImpactStats() {
                 className="grid grid-cols-2 md:grid-cols-5 gap-6"
               >
                 {chileStats.map((stat, idx) => (
-                  <div key={`chile-${idx}`} className="bg-transparent border border-bdm-dark hover:border-bdm-red p-4 text-center group transition-all duration-300 flex flex-col items-center">
+                  <div key={`chile-${idx}`} className="bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark hover:border-bdm-red p-4 text-center group transition-all duration-300 flex flex-col items-center rounded-lg">
                     <div className="text-bdm-red flex justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                       {stat.icon}
                     </div>

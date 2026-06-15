@@ -40,7 +40,7 @@ export default function ImpactChile() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-transparent border border-bdm-dark hover:border-bdm-red p-6 text-center group transition-all duration-300"
+              className="bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark hover:border-bdm-red p-6 text-center group transition-all duration-300 rounded-lg"
             >
               <div className="text-bdm-red flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}

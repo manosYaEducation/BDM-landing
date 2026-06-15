@@ -208,7 +208,7 @@ export default function CulturalExperience() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.06 }}
-                  className="aspect-square bg-transparent border border-bdm-dark flex flex-col items-center justify-center p-4 text-center hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group cursor-default overflow-hidden"
+                  className="aspect-square bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark flex flex-col items-center justify-center p-4 text-center hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group cursor-default overflow-hidden"
                 >
                   <span className="font-bebas tracking-wider text-lg uppercase mb-2 leading-tight">{item}</span>
                   <div className="text-gray-500 group-hover:text-bdm-black transition-colors duration-300">

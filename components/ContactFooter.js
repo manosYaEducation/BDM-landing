@@ -7,13 +7,13 @@ export default function ContactFooter() {
   return (
     <section id="contact">
       {/* Final CTA */}
-      <div className="bg-bdm-red py-12 relative overflow-hidden">
+      <div className="bg-bdm-black py-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bebas text-bdm-black mb-4 uppercase"
+            className="text-2xl md:text-3xl font-bebas text-bdm-red mb-4 uppercase"
           >
             ¿Quieres llevar Batalla de Maestros a tu comuna o institución?
           </motion.h2>
@@ -22,7 +22,7 @@ export default function ContactFooter() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-bdm-black/80 max-w-xl mx-auto mb-8 text-sm"
+            className="text-bdm-red/80 max-w-xl mx-auto mb-8 text-sm"
           >
             Organizamos experiencias culturales, competencias y programas de desarrollo artístico con impacto real en las comunidades.
           </motion.p>
@@ -33,10 +33,10 @@ export default function ContactFooter() {
             transition={{ delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
+            <button className="bg-bdm-red text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
               Solicitar Cotización
             </button>
-            <button className="border-2 border-bdm-black text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
+            <button className="bg-bdm-red text-bdm-black px-6 py-3 uppercase font-bold tracking-widest text-xs hover:bg-white hover:text-bdm-black transition-colors duration-300">
               Contactar Equipo BDM
             </button>
           </motion.div>
@@ -48,17 +48,17 @@ export default function ContactFooter() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             {/* Brand Col */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 p-6 rounded-lg">
               <h2 className="text-4xl font-bebas tracking-wider text-bdm-red mb-4">
                 BDM <span className="text-bdm-white">MAESTROS</span>
               </h2>
-              <p className="text-gray-400 text-sm mb-6">
+              <p className="text-white text-sm mb-6">
                 La red mundial de freestyle, arte urbano y desarrollo cultural nacida en Chile.
               </p>
             </div>
 
             {/* Contact Info */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 p-6 rounded-lg">
               <h3 className="text-xl font-bebas text-white mb-6 uppercase tracking-widest">Contacto</h3>
               <ul className="space-y-4">
                 <li className="flex items-start text-gray-400 text-sm hover:text-bdm-red transition-colors">
@@ -73,7 +73,7 @@ export default function ContactFooter() {
             </div>
 
             {/* Quick Links */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 p-6 rounded-lg">
               <h3 className="text-xl font-bebas text-white mb-6 uppercase tracking-widest">Enlaces</h3>
               <ul className="space-y-3">
                 <li><a href="#home" className="text-gray-400 text-sm hover:text-bdm-red transition-colors">Inicio</a></li>
@@ -84,7 +84,7 @@ export default function ContactFooter() {
             </div>
 
             {/* Newsletter */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 p-6 rounded-lg">
               <h3 className="text-xl font-bebas text-white mb-6 uppercase tracking-widest">Newsletter</h3>
               <p className="text-gray-400 text-sm mb-4">Únete a nuestra red para recibir novedades y eventos.</p>
               <form className="flex flex-col gap-3">
@@ -95,7 +95,7 @@ export default function ContactFooter() {
                 />
                 <button 
                   type="submit" 
-                  className="w-full bg-bdm-red text-bdm-black font-bold uppercase tracking-widest text-sm py-3 hover:bg-white transition-colors"
+                  className="w-full bg-bdm-red text-bdm-black font-bold uppercase tracking-widest text-sm py-3 hover:bg-bdm-black hover:text-white transition-colors"
                 >
                   Suscribirse
                 </button>

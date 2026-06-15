@@ -59,7 +59,7 @@ export default function PathToChampion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2, duration: 0.6 }}
-                className="flex flex-col bg-transparent backdrop-blur-sm border border-bdm-red/30 hover:border-bdm-red/40 rounded-2xl transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
+                className="flex flex-col bg-bdm-black/20 backdrop-blur-sm border border-bdm-red/30 hover:border-bdm-red/40 rounded-2xl transition-all duration-300 group hover:-translate-y-2 h-full shadow-xl"
                 style={{ perspective: "1000px" }}
               >
                 <div
@@ -121,7 +121,7 @@ export default function PathToChampion() {
 
                 <button
                   onClick={() => handleFlip(idx)}
-                  className="w-full py-2.5 text-xs font-bold uppercase tracking-wider text-bdm-red border-t border-bdm-red/30 hover:bg-bdm-red hover:text-white transition-colors duration-300 rounded-b-2xl"
+                  className="w-full py-2.5 text-xs font-bold uppercase tracking-wider text-bdm-red bg-bdm-black border-t border-bdm-red/30 hover:bg-bdm-red hover:text-white transition-colors duration-300 rounded-b-2xl"
                 >
                   {flippedIndex === idx ? "Ver menos" : "Ver más"}
                 </button>

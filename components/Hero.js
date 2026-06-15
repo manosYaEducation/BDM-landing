@@ -22,7 +22,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-bdm-red uppercase tracking-[0.3em] font-semibold mb-4 text-sm md:text-base"
+          className="text-white uppercase tracking-[0.3em] font-semibold mb-4 text-sm md:text-base"
         >
           La red mundial de freestyle, arte urbano y desarrollo cultural nacida en Chile.
         </motion.p>
@@ -41,7 +41,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10"
+          className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 bg-bdm-black/20 backdrop-blur-sm p-4 rounded-lg"
         >
           Más de 14 años impulsando talentos, conectando comunidades y llevando el freestyle desde los barrios hasta escenarios internacionales.
         </motion.p>

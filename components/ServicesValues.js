@@ -51,7 +51,7 @@ export default function ServicesValues() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 border border-bdm-dark bg-transparent hover:border-bdm-red transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-black/20 backdrop-blur-sm hover:border-bdm-red transition-colors duration-500"
           >
             <h3 className="text-3xl font-bebas text-bdm-red mb-3">Nuestra Misión</h3>
             <p className="text-gray-400 leading-relaxed">
@@ -64,7 +64,7 @@ export default function ServicesValues() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 border border-bdm-dark bg-transparent hover:border-bdm-red transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-black/20 backdrop-blur-sm hover:border-bdm-red transition-colors duration-500"
           >
             <h3 className="text-3xl font-bebas text-bdm-red mb-3">Nuestra Visión</h3>
             <p className="text-gray-400 leading-relaxed">
@@ -90,7 +90,7 @@ export default function ServicesValues() {
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "values"
                   ? "bg-bdm-red text-bdm-black"
-                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
+                  : "bg-bdm-black border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black"
               }`}
             >
               Nuestros Valores
@@ -100,7 +100,7 @@ export default function ServicesValues() {
               className={`px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ${
                 activeTab === "services"
                   ? "bg-bdm-red text-bdm-black"
-                  : "border border-bdm-red text-bdm-red hover:bg-bdm-red/20"
+                  : "bg-bdm-black border border-bdm-red text-bdm-red hover:bg-bdm-red hover:text-bdm-black"
               }`}
             >
               Nuestros Servicios
@@ -126,7 +126,7 @@ export default function ServicesValues() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.1 }}
-                    className="group bg-transparent border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
+                    className="group bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
                   >
                     <div className="text-bdm-red mb-5 group-hover:scale-110 transition-transform duration-300 origin-left relative z-10">
                       {service.icon}
@@ -159,7 +159,7 @@ export default function ServicesValues() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.07 }}
-                    className="flex flex-col items-center justify-center p-6 bg-transparent border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
+                    className="flex flex-col items-center justify-center p-6 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
                   >
                     <div className="mb-3 text-bdm-red group-hover:text-bdm-black transition-colors duration-300">
                       {val.icon}

@@ -23,7 +23,7 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 border border-bdm-dark bg-transparent hover:border-bdm-red transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-black/20 backdrop-blur-sm hover:border-bdm-red transition-colors duration-500"
           >
             <h3 className="text-4xl font-bebas text-bdm-red mb-4">Nuestra Misión</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
@@ -36,7 +36,7 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 border border-bdm-dark bg-transparent hover:border-bdm-red transition-colors duration-500"
+            className="p-8 border border-bdm-dark bg-bdm-black/20 backdrop-blur-sm hover:border-bdm-red transition-colors duration-500"
           >
             <h3 className="text-4xl font-bebas text-bdm-red mb-4">Nuestra Visión</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
@@ -58,7 +58,7 @@ export default function MissionVision() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="flex flex-col items-center justify-center p-6 bg-transparent border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
+              className="flex flex-col items-center justify-center p-6 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 hover:border-bdm-red hover:bg-bdm-red hover:text-bdm-black text-gray-300 transition-all duration-300 group"
             >
               <div className="mb-4 text-bdm-red group-hover:text-bdm-black transition-colors duration-300">
                 {val.icon}

@@ -52,7 +52,7 @@ export default function ProductsServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="group bg-transparent border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
+              className="group bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark hover:border-bdm-red p-8 transition-colors duration-300 relative overflow-hidden"
             >
               {/* Highlight gradient on hover */}
               
