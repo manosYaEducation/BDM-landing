@@ -1,16 +1,17 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const images = [
-  "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1520004434532-668416a08753?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1540039155733-5b4c9b1ce59c?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1493225457124-a1a2a4af3750?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1508973379184-7517410fb0bc?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1520872024865-3ff2805d8bb3?q=80&w=900&auto=format&fit=crop",
+  "/gallery-1.png",
+  "/gallery-2.png",
+  "/gallery-3.png",
+  "/gallery-4.png",
+  "/gallery-5.png",
+  "/gallery-6.png",
 ];
 
 export default function Gallery() {
@@ -55,9 +56,11 @@ export default function Gallery() {
                   onClick={() => openLightbox(idx % images.length)}
                 >
                   <div className="absolute inset-0 bg-bdm-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-                  <img
+                  <Image
                     src={src}
-                    alt={`BDM Evento ${(idx % images.length) + 1}`}
+                    alt={`Galeria BDM ${(idx % images.length) + 1}`}
+                    fill
+                    sizes="224px"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                   />
                 </motion.div>
@@ -101,7 +104,7 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               src={images[lightboxIndex]}
-              alt="BDM Lightbox"
+              alt={`Galeria BDM ${lightboxIndex + 1}`}
               className="max-w-full max-h-[85vh] object-contain border border-bdm-dark shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             />
