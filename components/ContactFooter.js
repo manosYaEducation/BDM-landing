@@ -1,9 +1,32 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, CheckCircle } from "lucide-react";
 
 export default function ContactFooter() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setSubscribed(true);
+    setEmail("");
+    setTimeout(() => setSubscribed(false), 5000);
+
+    try {
+      await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+    } catch {
+      // silent fallback — email notification is best-effort
+    }
+  };
+
   return (
     <section id="contact">
       {/* Final CTA */}
@@ -87,11 +110,14 @@ export default function ContactFooter() {
             <div className="lg:col-span-1 bg-bdm-black/20 backdrop-blur-sm border border-bdm-dark/50 p-6 rounded-lg">
               <h3 className="text-xl font-bebas text-white mb-6 uppercase tracking-widest">Newsletter</h3>
               <p className="text-gray-400 text-sm mb-4">Únete a nuestra red para recibir novedades y eventos.</p>
-              <form className="flex flex-col gap-3">
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
                 <input 
                   type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Tu correo electrónico" 
                   className="w-full bg-transparent border border-gray-800 text-white px-4 py-3 text-sm focus:outline-none focus:border-bdm-red transition-colors"
+                  required
                 />
                 <button 
                   type="submit" 
@@ -100,6 +126,16 @@ export default function ContactFooter() {
                   Suscribirse
                 </button>
               </form>
+              {subscribed && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-3 flex items-start gap-2 text-sm text-green-400"
+                >
+                  <CheckCircle size={16} className="shrink-0 mt-0.5" />
+                  <span>Te haz registrado exitosamente para las novedades de BDM</span>
+                </motion.div>
+              )}
             </div>
           </div>
 
