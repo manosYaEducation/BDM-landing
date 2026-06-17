@@ -1,0 +1,22 @@
+{
+    "leads": [
+        {
+            "email": "alphadocere@gmail.com",
+            "timestamp": "2026-06-17 01:21:24"
+        },
+        {
+            "email": "alphadocere@gmail.com",
+            "timestamp": "2026-06-17 01:23:11"
+        },
+        {
+            "email": "dev.manosya@gmail.com",
+            "timestamp": "2026-06-17 01:30:35"
+        }
+    ],
+    "eventos": [
+        {
+            "elemento": "",
+            "timestamp": "2026-06-17 01:09:02"
+        }
+    ]
+}

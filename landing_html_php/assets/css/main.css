@@ -1,0 +1,104 @@
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #0a0a0a; color: #f5f5f5; font-family: 'Montserrat', sans-serif; }
+
+  .font-bebas { font-family: 'Bebas Neue', cursive; }
+
+  /* Hero placeholder */
+  .hero-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0507 40%, #2a0810 70%, #0a0a0a 100%);
+    position: relative;
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(168,28,36,0.25) 0%, transparent 65%);
+  }
+
+  /* About image placeholder */
+  .about-img-placeholder {
+    background: linear-gradient(135deg, #1a0507 0%, #2a0810 50%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(168,28,36,0.4);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Gallery placeholder tiles */
+  .gallery-tile-1 { background: linear-gradient(135deg, #1a0507, #2a0810); }
+  .gallery-tile-2 { background: linear-gradient(135deg, #0d1a0d, #1a2a1a); }
+  .gallery-tile-3 { background: linear-gradient(135deg, #1a1505, #2a2010); }
+  .gallery-tile-4 { background: linear-gradient(135deg, #05101a, #0a1e2a); }
+  .gallery-tile-5 { background: linear-gradient(135deg, #1a0514, #2a0820); }
+  .gallery-tile-6 { background: linear-gradient(135deg, #0a0a1a, #10102a); }
+
+  /* Marquee */
+  .marquee-wrap { overflow: hidden; }
+  .marquee-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: marquee 35s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* Scroll fade-in */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+  .reveal-scale { opacity: 0; transform: scale(0.88); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+  /* Header scroll effect */
+  header.scrolled { background: rgba(10,10,10,0.95) !important; backdrop-filter: blur(12px); }
+
+  /* Value card hover */
+  .value-card { transition: all 0.3s ease; }
+  .value-card:hover { background: #a81c24; border-color: #a81c24; color: #0a0a0a; }
+  .value-card:hover .card-icon { color: #0a0a0a; }
+
+  /* Event card hover */
+  .event-card { transition: transform 0.3s ease, border-color 0.3s ease; }
+  .event-card:hover { transform: translateY(-8px); border-color: #a81c24; }
+
+  /* Champion card flip */
+  .flip-card { perspective: 1000px; }
+  .flip-inner { position: relative; transform-style: preserve-3d; transition: transform 0.6s ease; height: 100%; }
+  .flip-card:hover .flip-inner { transform: rotateY(180deg); }
+  .flip-front, .flip-back {
+    position: absolute; inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flip-back { transform: rotateY(180deg); }
+
+  /* Stat counter glow */
+  .stat-num { text-shadow: 0 0 20px rgba(168,28,36,0.5); }
+
+  /* Tab buttons */
+  .tab-btn.active { background: #a81c24; color: #0a0a0a; }
+  .tab-btn.inactive { background: #0a0a0a; border: 1px solid #a81c24; color: #a81c24; }
+  .tab-btn.inactive:hover { background: #a81c24; color: #0a0a0a; }
+
+  /* Mobile menu */
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: #a81c24; border-radius: 2px; }
+
+  /* Red accent line */
+  .red-line { width: 80px; height: 4px; background: #a81c24; }
