@@ -58,6 +58,14 @@ function showTab(tab) {
   document.getElementById('btn-servicios').className = 'tab-btn px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ' + (tab === 'servicios' ? 'active' : 'inactive');
 }
 
+// Tabs: gallery
+function showGallery(type) {
+  document.getElementById('gallery-fotos').classList.toggle('hidden', type !== 'fotos');
+  document.getElementById('gallery-videos').classList.toggle('hidden', type !== 'videos');
+  document.getElementById('btn-fotos').className = 'tab-btn px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all ' + (type === 'fotos' ? 'active' : 'inactive');
+  document.getElementById('btn-videos').className = 'tab-btn px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all ' + (type === 'videos' ? 'active' : 'inactive');
+}
+
 // Tabs: global impact
 function showImpact(type) {
   document.getElementById('impact-global').classList.toggle('hidden', type !== 'global');
