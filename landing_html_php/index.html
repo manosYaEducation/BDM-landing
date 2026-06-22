@@ -579,6 +579,7 @@ tailwind.config = {
         <button onclick="showGallery('videos')" id="btn-videos" class="tab-btn inactive px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all">Videos</button>
       </div>
     </div>
+<<<<<<< HEAD
     <div id="gallery-fotos" class="marquee-wrap">
       <div class="marquee-track">
         <!-- 12 tiles (6 + 6 duplicate for seamless loop) -->
@@ -613,8 +614,51 @@ tailwind.config = {
         <div class="gallery-tile-4 w-56 h-40 shrink-0 flex items-center justify-center relative overflow-hidden group cursor-pointer"><span class="font-bebas text-2xl text-white/20 group-hover:text-bdm-red/60 transition-colors">REGIONAL 2024</span><div class="absolute inset-0 bg-bdm-red/0 group-hover:bg-bdm-red/10 transition-colors"></div></div>
         <div class="gallery-tile-5 w-56 h-40 shrink-0 flex items-center justify-center relative overflow-hidden group cursor-pointer"><span class="font-bebas text-2xl text-white/20 group-hover:text-bdm-red/60 transition-colors">FREESTYLE</span><div class="absolute inset-0 bg-bdm-red/0 group-hover:bg-bdm-red/10 transition-colors"></div></div>
         <div class="gallery-tile-6 w-56 h-40 shrink-0 flex items-center justify-center relative overflow-hidden group cursor-pointer"><span class="font-bebas text-2xl text-white/20 group-hover:text-bdm-red/60 transition-colors">BEATBOX 2024</span><div class="absolute inset-0 bg-bdm-red/0 group-hover:bg-bdm-red/10 transition-colors"></div></div>
+=======
+    <div class="gallery-carousel-shell">
+      <button id="gallery-carousel-prev" class="gallery-carousel-arrow gallery-carousel-prev" type="button" aria-label="Ver fotografías anteriores">&#10094;</button>
+      <div id="gallery-carousel-track" class="gallery-carousel-track">
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-01.png" aria-label="Ampliar fotografía 1 de BDM">
+        <img src="assets/img/galeria-bdm-01.png" alt="Evento Batalla de Maestros, fotografía 1" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-02.png" aria-label="Ampliar fotografía 2 de BDM">
+        <img src="assets/img/galeria-bdm-02.png" alt="Evento Batalla de Maestros, fotografía 2" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-03.png" aria-label="Ampliar fotografía 3 de BDM">
+        <img src="assets/img/galeria-bdm-03.png" alt="Evento Batalla de Maestros, fotografía 3" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-04.png" aria-label="Ampliar fotografía 4 de BDM">
+        <img src="assets/img/galeria-bdm-04.png" alt="Evento Batalla de Maestros, fotografía 4" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-05.png" aria-label="Ampliar fotografía 5 de BDM">
+        <img src="assets/img/galeria-bdm-05.png" alt="Evento Batalla de Maestros, fotografía 5" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-06.png" aria-label="Ampliar fotografía 6 de BDM">
+        <img src="assets/img/galeria-bdm-06.png" alt="Evento Batalla de Maestros, fotografía 6" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-07.png" aria-label="Ampliar fotografía 7 de BDM">
+        <img src="assets/img/galeria-bdm-07.png" alt="Evento Batalla de Maestros, fotografía 7" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-08.png" aria-label="Ampliar fotografía 8 de BDM">
+        <img src="assets/img/galeria-bdm-08.png" alt="Evento Batalla de Maestros, fotografía 8" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-09.png" aria-label="Ampliar fotografía 9 de BDM">
+        <img src="assets/img/galeria-bdm-09.png" alt="Evento Batalla de Maestros, fotografía 9" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-10.png" aria-label="Ampliar fotografía 10 de BDM">
+        <img src="assets/img/galeria-bdm-10.png" alt="Evento Batalla de Maestros, fotografía 10" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-11.png" aria-label="Ampliar fotografía 11 de BDM">
+        <img src="assets/img/galeria-bdm-11.png" alt="Evento Batalla de Maestros, fotografía 11" loading="lazy">
+      </button>
+      <button class="gallery-photo" type="button" data-gallery-image="assets/img/galeria-bdm-12.png" aria-label="Ampliar fotografía 12 de BDM">
+        <img src="assets/img/galeria-bdm-12.png" alt="Evento Batalla de Maestros, fotografía 12" loading="lazy">
+      </button>
+>>>>>>> origin/Feature/Jmurillo/2026-06-22/Galeria-eventos
       </div>
+      <button id="gallery-carousel-next" class="gallery-carousel-arrow gallery-carousel-next" type="button" aria-label="Ver fotografías siguientes">&#10095;</button>
     </div>
+<<<<<<< HEAD
     <div id="gallery-videos" class="hidden">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto" id="video-grid">
         <div class="video-card bg-white/5 border border-bdm-dark rounded-xl overflow-hidden group cursor-pointer" data-video="https://www.youtube.com/embed/qs2zq5AGiZE" onclick="openVideo(this.dataset.video)">
@@ -691,6 +735,14 @@ tailwind.config = {
         </div>
       </div>
     </div>
+=======
+    <div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotografías" aria-hidden="true">
+      <button class="gallery-close" type="button" aria-label="Cerrar visor">&times;</button>
+      <button class="gallery-prev" type="button" aria-label="Fotografía anterior">&#10094;</button>
+      <img id="gallery-lightbox-image" src="" alt="Fotografía ampliada del evento BDM">
+      <button class="gallery-next" type="button" aria-label="Fotografía siguiente">&#10095;</button>
+      </div>
+>>>>>>> origin/Feature/Jmurillo/2026-06-22/Galeria-eventos
   </div>
 </section>
 
