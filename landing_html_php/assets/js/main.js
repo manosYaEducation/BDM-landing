@@ -66,6 +66,82 @@ function showImpact(type) {
   document.getElementById('btn-chile').className = 'tab-btn px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all ' + (type === 'chile' ? 'active' : 'inactive');
 }
 
+// Visor de la galería local
+const galleryItems = [...document.querySelectorAll('[data-gallery-image]')];
+const galleryLightbox = document.getElementById('gallery-lightbox');
+const galleryLightboxImage = document.getElementById('gallery-lightbox-image');
+const galleryCarouselTrack = document.getElementById('gallery-carousel-track');
+const galleryCarouselPrev = document.getElementById('gallery-carousel-prev');
+const galleryCarouselNext = document.getElementById('gallery-carousel-next');
+let activeGalleryImage = 0;
+let galleryAutoplayTimer;
+
+function moveGalleryCarousel(direction) {
+  if (!galleryCarouselTrack || !galleryItems.length) return;
+  const itemWidth = galleryItems[0].getBoundingClientRect().width + 16;
+  const atStart = galleryCarouselTrack.scrollLeft <= 2;
+  const atEnd = galleryCarouselTrack.scrollLeft + galleryCarouselTrack.clientWidth >= galleryCarouselTrack.scrollWidth - 2;
+  if (direction < 0 && atStart) {
+    galleryCarouselTrack.scrollTo({ left: galleryCarouselTrack.scrollWidth, behavior: 'smooth' });
+  } else if (direction > 0 && atEnd) {
+    galleryCarouselTrack.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    galleryCarouselTrack.scrollBy({ left: itemWidth * direction, behavior: 'smooth' });
+  }
+}
+
+function startGalleryAutoplay() {
+  if (!galleryCarouselTrack || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  clearInterval(galleryAutoplayTimer);
+  galleryAutoplayTimer = setInterval(() => moveGalleryCarousel(1), 3000);
+}
+
+function stopGalleryAutoplay() {
+  clearInterval(galleryAutoplayTimer);
+}
+
+function showGalleryImage(index) {
+  activeGalleryImage = (index + galleryItems.length) % galleryItems.length;
+  galleryLightboxImage.src = galleryItems[activeGalleryImage].dataset.galleryImage;
+}
+
+function closeGalleryLightbox() {
+  galleryLightbox.classList.remove('open');
+  galleryLightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  startGalleryAutoplay();
+}
+
+if (galleryItems.length && galleryLightbox && galleryLightboxImage) {
+  galleryCarouselPrev?.addEventListener('click', () => { moveGalleryCarousel(-1); startGalleryAutoplay(); });
+  galleryCarouselNext?.addEventListener('click', () => { moveGalleryCarousel(1); startGalleryAutoplay(); });
+  galleryCarouselTrack?.addEventListener('mouseenter', stopGalleryAutoplay);
+  galleryCarouselTrack?.addEventListener('mouseleave', startGalleryAutoplay);
+  galleryCarouselTrack?.addEventListener('pointerdown', stopGalleryAutoplay);
+  galleryCarouselTrack?.addEventListener('pointerup', startGalleryAutoplay);
+  galleryCarouselTrack?.addEventListener('focusin', stopGalleryAutoplay);
+  galleryCarouselTrack?.addEventListener('focusout', startGalleryAutoplay);
+  document.addEventListener('visibilitychange', () => document.hidden ? stopGalleryAutoplay() : startGalleryAutoplay());
+  startGalleryAutoplay();
+  galleryItems.forEach((item, index) => item.addEventListener('click', () => {
+    stopGalleryAutoplay();
+    showGalleryImage(index);
+    galleryLightbox.classList.add('open');
+    galleryLightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }));
+  galleryLightbox.querySelector('.gallery-close').addEventListener('click', closeGalleryLightbox);
+  galleryLightbox.querySelector('.gallery-prev').addEventListener('click', () => showGalleryImage(activeGalleryImage - 1));
+  galleryLightbox.querySelector('.gallery-next').addEventListener('click', () => showGalleryImage(activeGalleryImage + 1));
+  galleryLightbox.addEventListener('click', event => { if (event.target === galleryLightbox) closeGalleryLightbox(); });
+  document.addEventListener('keydown', event => {
+    if (!galleryLightbox.classList.contains('open')) return;
+    if (event.key === 'Escape') closeGalleryLightbox();
+    if (event.key === 'ArrowLeft') showGalleryImage(activeGalleryImage - 1);
+    if (event.key === 'ArrowRight') showGalleryImage(activeGalleryImage + 1);
+  });
+}
+
 
 
 
