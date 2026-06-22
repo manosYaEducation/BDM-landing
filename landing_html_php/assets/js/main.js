@@ -58,6 +58,21 @@ function showTab(tab) {
   document.getElementById('btn-servicios').className = 'tab-btn px-6 py-2 uppercase tracking-widest text-sm font-bold transition-all duration-300 ' + (tab === 'servicios' ? 'active' : 'inactive');
 }
 
+// Video modal
+function openVideo(url) {
+  document.getElementById('video-iframe').src = url;
+  document.getElementById('video-modal').classList.remove('hidden');
+  document.getElementById('video-modal').classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+function closeVideo(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('video-iframe').src = '';
+  document.getElementById('video-modal').classList.add('hidden');
+  document.getElementById('video-modal').classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
 // Tabs: gallery
 function showGallery(type) {
   document.getElementById('gallery-fotos').classList.toggle('hidden', type !== 'fotos');
