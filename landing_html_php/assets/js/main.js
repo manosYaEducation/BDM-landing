@@ -60,16 +60,14 @@ function showTab(tab) {
 
 // Video modal
 function openVideo(url) {
-  document.getElementById('video-iframe').src = url;
-  document.getElementById('video-modal').classList.remove('hidden');
-  document.getElementById('video-modal').classList.add('flex');
+  document.getElementById('video-iframe').src = url + '?autoplay=1';
+  document.getElementById('video-modal').classList.add('modal-open');
   document.body.style.overflow = 'hidden';
 }
 function closeVideo(e) {
   if (e && e.target !== e.currentTarget) return;
   document.getElementById('video-iframe').src = '';
-  document.getElementById('video-modal').classList.add('hidden');
-  document.getElementById('video-modal').classList.remove('flex');
+  document.getElementById('video-modal').classList.remove('modal-open');
   document.body.style.overflow = '';
 }
 
